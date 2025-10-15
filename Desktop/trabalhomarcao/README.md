@@ -1,64 +1,64 @@
-# 🏙️ Zeladoria Urbana - Container Básico
+# 🏙️ Urban Maintenance - Basic Container
 
-API simples para gerenciar ocorrências urbanas.
+Simple API to manage urban issues.
 
-## 🚀 Como usar
+## 🚀 How to use
 
-### 1. Clone o repositório
+### 1. Clone the repository
 ```bash
 git clone https://github.com/ReinaldoCandeo/conteiner-recomenda.git
 cd conteiner-recomenda
 ```
 
-### 2. Inicie o container
+### 2. Start the container
 ```bash
 docker-compose up
 ```
 
-### 3. Acesse a API
+### 3. Access the API
 ```bash
-# Teste no navegador ou com curl
+# Test in browser or with curl
 curl http://localhost:3000
 ```
 
 ## 📡 Endpoints
 
-- `GET /` - Página inicial
-- `GET /api/ocorrencias` - Lista ocorrências
-- `POST /api/ocorrencias` - Cria ocorrência
+- `GET /` - Home page
+- `GET /api/issues` - List issues
+- `POST /api/issues` - Create issue
 
-## 📝 Exemplo de uso
+## 📝 Usage example
 
 ```bash
-# Listar ocorrências
-curl http://localhost:3000/api/ocorrencias
+# List issues
+curl http://localhost:3000/api/issues
 
-# Criar ocorrência
-curl -X POST http://localhost:3000/api/ocorrencias \
+# Create issue
+curl -X POST http://localhost:3000/api/issues \
   -H "Content-Type: application/json" \
-  -d '{"titulo":"Buraco na rua","descricao":"Grande buraco"}'
+  -d '{"title":"Pothole in street","description":"Large pothole"}'
 ```
 
-## 🛠️ Estrutura
+## 🛠️ Structure
 
 ```
 ├── backend/
-│   ├── index.js         # Servidor Node.js
+│   ├── index.js         # Node.js server
 │   ├── package.json
 │   └── Dockerfile
-└── docker-compose.yml   # Orquestração
+└── docker-compose.yml   # Orchestration
 ```
 
-## 🔧 Comandos
+## 🔧 Commands
 
 ```bash
-# Iniciar
+# Start
 docker-compose up
 
-# Parar
+# Stop
 docker-compose down
 
-# Ver logs
+# View logs
 docker-compose logs -f
 
 # Rebuild
@@ -67,5 +67,5 @@ docker-compose up --build
 
 ---
 
-**Simples e direto ao ponto! 🎯**
+**Simple and straight to the point! 🎯**
 

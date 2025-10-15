@@ -1,7 +1,7 @@
 {
-  "name": "zeladoria-backend",
+  "name": "urban-maintenance-backend",
   "version": "1.0.0",
-  "description": "API básica para Zeladoria Urbana",
+  "description": "Basic API for Urban Maintenance",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

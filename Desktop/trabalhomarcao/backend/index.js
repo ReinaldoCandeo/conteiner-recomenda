@@ -1,37 +1,37 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 
-// Rota básica
+// Basic route
 app.get('/', (req, res) => {
   res.json({ 
-    message: '🏙️ API Zeladoria Urbana funcionando!',
+    message: '🏙️ Urban Maintenance API is running!',
     status: 'OK'
   });
 });
 
-// Listar ocorrências
-app.get('/api/ocorrencias', (req, res) => {
+// List issues
+app.get('/api/issues', (req, res) => {
   res.json({
-    ocorrencias: [
-      { id: 1, titulo: 'Buraco na rua', status: 'Aberto' },
-      { id: 2, titulo: 'Lâmpada queimada', status: 'Em análise' }
+    issues: [
+      { id: 1, title: 'Pothole in street', status: 'Open' },
+      { id: 2, title: 'Broken streetlight', status: 'In review' }
     ]
   });
 });
 
-// Criar ocorrência
-app.post('/api/ocorrencias', (req, res) => {
-  const { titulo, descricao } = req.body;
+// Create issue
+app.post('/api/issues', (req, res) => {
+  const { title, description } = req.body;
   res.json({
-    message: 'Ocorrência criada!',
-    ocorrencia: { id: 3, titulo, descricao, status: 'Aberto' }
+    message: 'Issue created!',
+    issue: { id: 3, title, description, status: 'Open' }
   });
 });
 
 app.listen(port, () => {
-  console.log(`🚀 Servidor rodando em http://localhost:${port}`);
+  console.log(`🚀 Server running at http://localhost:${port}`);
 });
 
